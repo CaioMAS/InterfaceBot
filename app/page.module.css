@@ -1,0 +1,134 @@
+/* Estilo para a tela de login */
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #121212;
+  color: white;
+}
+
+.loginInput {
+  padding: 0.7rem;
+  margin-top: 1rem;
+  width: 250px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.loginButton {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.loginButton:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para a tabela principal */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.table th, .table td {
+  border: 1px solid #444;
+  padding: 12px;
+  text-align: center;
+  color: white;
+}
+
+.table th {
+  background-color: #1f1f1f;
+}
+
+.table tr:nth-child(even) {
+  background-color: #2c2c2c;
+}
+
+.table tr:nth-child(odd) {
+  background-color: #1f1f1f;
+}
+
+.buttonSell {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.buttonSell:hover {
+  background-color: #e60000;
+}
+
+/* Lucro/prejuízo colorido */
+.profitPositive {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.profitNegative {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+  .table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 1rem;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .table td {
+    text-align: left;
+    padding: 8px;
+    position: relative;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  .buttonSell {
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 8px;
+    font-size: 16px;
+  }
+}
+
